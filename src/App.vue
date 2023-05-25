@@ -1,12 +1,18 @@
 <template>
-  <div id="app"></div>
+  <div id="app">
+    <ExampleButton :text="'點我'" />
+  </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from '@vue/composition-api'
+import ExampleButton from './components/ExampleButton.vue'
 
 export default defineComponent({
-  name: 'App'
+  name: 'App',
+  components: {
+    ExampleButton
+  }
 })
 </script>
 

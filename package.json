@@ -2,11 +2,16 @@
   "name": "vue-canister",
   "version": "0.0.0",
   "private": true,
+  "description": "A collection of reusable and customizable Vue components for building modern web applications.",
+  "author": "Hardy",
+  "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "doc": "vue-cli-service styleguidist",
+    "doc:build": "vue-cli-service styleguidist:build"
   },
   "dependencies": {
     "@vue/composition-api": "^1.7.1",
@@ -34,6 +39,7 @@
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "typescript": "~4.1.5",
+    "vue-cli-plugin-styleguidist": "~4.72.4",
     "vue-template-compiler": "^2.6.11"
   }
 }
