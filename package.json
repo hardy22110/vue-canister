@@ -1,13 +1,14 @@
 {
   "name": "vue-canister",
   "version": "0.0.0",
-  "private": true,
+  "private": false,
   "description": "A collection of reusable and customizable Vue components for building modern web applications.",
+  "main": "./dist/vueCanister.umd.js",
   "author": "Hardy",
   "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --target lib --name vueCanister ./src/components/index.ts",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "doc": "vue-cli-service styleguidist",

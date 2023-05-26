@@ -1,12 +1,12 @@
 import { shallowMount } from '@vue/test-utils'
-import HelloWorld from '@/components/HelloWorld.vue'
+import ExampleButton from '@/components/ExampleButton.vue'
 
-describe('HelloWorld.vue', () => {
+describe('ExampleButton.vue', () => {
   it('renders props.msg when passed', () => {
-    const msg = 'new message'
-    const wrapper = shallowMount(HelloWorld, {
-      propsData: { msg }
+    const text = 'text'
+    const wrapper = shallowMount(ExampleButton, {
+      propsData: { text }
     })
-    expect(wrapper.text()).toMatch(msg)
+    expect(wrapper.text()).toMatch(text)
   })
 })

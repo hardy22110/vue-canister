@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="example-button">
     <button @click="clickButton">{{ text }}</button>
     count: {{ renderCount }}
   </div>
@@ -29,11 +29,6 @@ export default defineComponent({
       count: 0
     }
   },
-  watch: {
-    text (newValue: string) {
-      console.log('watch text', newValue)
-    }
-  },
   computed: {
     renderCount: {
       get (): number {
@@ -51,7 +46,6 @@ export default defineComponent({
      */
     clickButton () {
       this.renderCount++
-      console.log('this.count', this.count)
       /**
        * Click event
        * @event click
@@ -61,3 +55,18 @@ export default defineComponent({
   }
 })
 </script>
+
+<style lang="scss">
+.example-button {
+  button {
+    border: 1px solid lightskyblue;
+    cursor: pointer;
+    padding: 4px 12px;
+    border-radius: 4px;
+    background-color: transparent;
+  }
+  button:active{
+    background-color: aliceblue;
+  }
+}
+</style>
