@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils'
-import ExampleButton from '@/components/ExampleButton.vue'
+import ExampleButton from '../src/components/ExampleButton.vue'
 
 describe('ExampleButton.vue', () => {
   it('renders props.msg when passed', () => {

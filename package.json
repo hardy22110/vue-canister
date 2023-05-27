@@ -1,6 +1,6 @@
 {
   "name": "vue-canister",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "private": false,
   "description": "A collection of reusable and customizable Vue components for building modern web applications.",
   "main": "./dist/vueCanister.umd.js",
@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name vueCanister ./src/components/index.ts",
+    "build": "vue-cli-service build --target lib --name vueCanister ./src/components/index.ts && tsc --emitDeclarationOnly -p tsconfig.json",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "doc": "vue-cli-service styleguidist",
@@ -42,5 +42,9 @@
     "typescript": "~4.1.5",
     "vue-cli-plugin-styleguidist": "~4.72.4",
     "vue-template-compiler": "^2.6.11"
-  }
+  },
+  "typings": "dist/types/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ]
 }
