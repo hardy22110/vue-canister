@@ -1,13 +1,7 @@
-<template>
-  <div id="app">
-    <button @click="showA = !showA">
-      點我A
-    </button>
-    <button @click="showB = !showB">
-      點我B
-    </button>
-    <MovingWindow
-      v-model="showA"
+MovingWindow example:
+
+```vue
+       <MovingWindow
       :wrap-min-height="'400px'"
       :wrap-min-width="'400px'"
     >
@@ -43,35 +37,4 @@
         </div>
       </template>
     </MovingWindow>
-    <MovingWindow v-model="showB" />
-    <ExampleButton />
-  </div>
-</template>
-
-<script lang="ts">
-import Vue from 'vue'
-import ExampleButton from './components/ExampleButton.vue'
-import MovingWindow from './components/MovingWindow.vue'
-
-export default Vue.extend({
-  name: 'App',
-  components: {
-    ExampleButton,
-    MovingWindow
-  },
-  data() {
-    return {
-      showA: false,
-      showB: false
-    }
-  }
-})
-</script>
-
-<style lang="scss">
-#app {
-  text-align: center;
-  width: 100vw;
-  height: 100vh;
-}
-</style>
+```

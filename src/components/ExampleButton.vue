@@ -1,19 +1,21 @@
 <template>
   <div class="example-button">
-    <button @click="clickButton">{{ text }}</button>
+    <button @click="clickButton">
+      {{ text }}
+    </button>
     count: {{ renderCount }}
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@vue/composition-api'
+import Vue from 'vue'
 
 /**
  * the example button component
  * @displayName ExampleButton
  * @since v0.0.0
  */
-export default defineComponent({
+export default Vue.extend({
   name: 'ExampleButton',
   props: {
     /**
@@ -24,17 +26,17 @@ export default defineComponent({
       type: String
     }
   },
-  data () {
+  data() {
     return {
       count: 0
     }
   },
   computed: {
     renderCount: {
-      get (): number {
+      get(): number {
         return this.count
       },
-      set () {
+      set() {
         this.count++
       }
     }
@@ -44,7 +46,7 @@ export default defineComponent({
      * Click Button
      * @public
      */
-    clickButton () {
+    clickButton() {
       this.renderCount++
       /**
        * Click event
@@ -65,7 +67,8 @@ export default defineComponent({
     border-radius: 4px;
     background-color: transparent;
   }
-  button:active{
+
+  button:active {
     background-color: aliceblue;
   }
 }

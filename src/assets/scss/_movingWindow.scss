@@ -1,0 +1,33 @@
+// plugin
+.vxe-modal--wrapper {
+
+    .vxe-modal--header-title,
+    .vxe-modal--header-right,
+    .vxe-modal--content,
+    .vxe-modal--footer {
+        padding: 0px;
+    }
+
+    .vxe-modal--header-right {
+        display: flex;
+        align-items: center;
+    }
+}
+
+// component
+.v-canister-moving-window--corner {
+
+    .v-canister-moving-window--shrink-button,
+    .v-canister-moving-window--zoom-button,
+    .v-canister-moving-window--close-button {
+        text-align: center;
+        margin-right: 4px
+    }
+    .v-canister-moving-window--close-button{
+        margin-right: 8px
+    }
+}
+
+.v-canister-moving-window--body {
+    height: 100%
+}

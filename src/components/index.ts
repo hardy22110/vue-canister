@@ -1,15 +1,23 @@
 import Vue from 'vue'
-import vueCompositionAPI from '@vue/composition-api'
 import ExampleButton from './ExampleButton.vue'
+import MovingWindow from './MovingWindow.vue'
+import '@/assets/scss/index.scss'
+import { Icon, Column, Table, Footer, Modal } from 'vxe-table'
+
+Vue.use(Icon)
+  .use(Column)
+  .use(Table)
+  .use(Footer)
+  .use(Modal)
+
 Vue.config.productionTip = false
-Vue.use(vueCompositionAPI)
 
 Vue.component('ExampleButton', ExampleButton)
+Vue.component('MovingWindow', MovingWindow)
 
 export default {
-  ExampleButton
+  ExampleButton,
+  MovingWindow
 }
 
-export {
-  ExampleButton
-}
+export { ExampleButton, MovingWindow }

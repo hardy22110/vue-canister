@@ -1,5 +1,6 @@
 {
     "cSpell.words": [
         "styleguidist"
-    ]
+    ],
+    "typescript.tsdk": "node_modules/typescript/lib"
 }
